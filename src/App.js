@@ -22,7 +22,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <NavBar user={user} />
-        <main className="container">
+        <main className="container-fluid">
           <Switch>
             <ProtectedRoute path="/home" component={Pokes} />
             <Route path="/login" component={LoginForm} />

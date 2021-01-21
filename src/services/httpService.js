@@ -10,7 +10,6 @@ axios.interceptors.response.use(null, (error) => {
 
   if (!expectedError) {
     console.log(error);
-    // alert(error);
   }
 
   return Promise.reject(error);

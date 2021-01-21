@@ -6,7 +6,7 @@ import { faLeaf } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = ({ user }) => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-danger bg-danger mb-3">
+    <nav className="navbar navbar-expand-lg navbar-success bg-success mb-3">
       <Link className="navbar-brand text-white" to="/">
         <FontAwesomeIcon icon={faLeaf} /> Sweet Scent
       </Link>
@@ -25,7 +25,7 @@ const NavBar = ({ user }) => {
           {user && (
             <React.Fragment>
               <NavLink className="nav-item nav-link text-white" to="/">
-                {capitalize(user.name)}
+                {capitalize(user.username)}
               </NavLink>
               <NavLink className="nav-item nav-link text-white" to="/logout">
                 Logout

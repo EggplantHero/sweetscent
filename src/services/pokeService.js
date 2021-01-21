@@ -2,7 +2,7 @@ import http from "./httpService";
 
 const apiEndpoint = "/pokemon";
 
-function pokeUrl(id) {
+export function pokeUrl(id) {
   return `${apiEndpoint}/${id}`;
 }
 
@@ -14,13 +14,14 @@ export function getPoke(pokeId) {
   return http.get(pokeUrl(pokeId));
 }
 
-export function savePoke(poke) {
-  if (poke._id) {
-    let body = { ...poke };
-    delete body._id;
-    return http.put(pokeUrl(poke._id), body);
-  }
+export function saveNewPoke(poke) {
   return http.post(apiEndpoint, poke);
+}
+
+export function savePoke(poke) {
+  let body = { ...poke };
+  delete body._id;
+  return http.put(pokeUrl(poke._id), body);
 }
 
 export function deletePoke(pokeId) {

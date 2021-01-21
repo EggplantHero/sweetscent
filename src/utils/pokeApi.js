@@ -8,6 +8,9 @@ export async function getPoke(input) {
 export async function getImg(input) {
   if (!input) return;
   const poke = await getPoke(input);
+  if (poke.data.sprites.front_default === null) {
+    return "blank";
+  }
   return poke.data.sprites.front_default;
 }
 
