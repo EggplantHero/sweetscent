@@ -1,0 +1,56 @@
+body[data-theme="spring"] {
+  --nav-color: rgb(232, 179, 193);
+  --primary-color: rgb(246, 207, 209);
+  --primary-color-header: rgb(232, 179, 193);
+  --primary-color-card: rgba(232, 179, 193, 0.5);
+  --primary-color-footer: rgb(240, 192, 205);
+  --border-color: rgb(209, 174, 183);
+}
+body[data-theme="summer"] {
+  --nav-color: rgb(77, 184, 95);
+  --primary-color: rgb(168, 231, 175);
+  --primary-color-header: rgb(77, 184, 95);
+  --primary-color-card: rgba(168, 231, 175, 0.5);
+  --primary-color-footer: rgb(147, 221, 147);
+  --border-color: rgb(137, 177, 137);
+}
+body[data-theme="fall"] {
+  --nav-color: rgb(248, 169, 66);
+  --primary-color: rgb(245, 200, 141);
+  --primary-color-header: rgb(248, 169, 66);
+  --primary-color-card: rgba(245, 200, 141, 0.5);
+  --primary-color-footer: rgb(247, 184, 103);
+  --border-color: rgb(214, 178, 130);
+}
+body[data-theme="winter"] {
+  --nav-color: rgb(154, 203, 219);
+  --primary-color: rgb(199, 235, 247);
+  --primary-color-header: rgb(154, 203, 219);
+  --primary-color-card: rgba(199, 235, 247, 0.5);
+  --primary-color-footer: rgb(184, 228, 243);
+  --border-color: rgb(155, 192, 204);
+}
+
+body#body {
+  background-color: var(--primary-color);
+}
+
+nav {
+  background-color: var(--nav-color);
+  color: rgb(240, 240, 240);
+}
+
+div.card {
+  border-color: var(--border-color);
+  background-color: rgba(0, 0, 0, 0);
+  .card-header {
+    background-color: var(--primary-color-header);
+    color: rgb(240, 240, 240);
+  }
+  .card-body {
+    background-color: var(--primary-color-card);
+  }
+  .card-footer {
+    background-color: var(--primary-color-footer);
+  }
+}
