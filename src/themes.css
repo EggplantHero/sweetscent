@@ -3,7 +3,7 @@ body[data-theme=spring] {
   --primary-color: rgb(246, 207, 209);
   --primary-color-header: rgb(232, 179, 193);
   --primary-color-card: rgba(232, 179, 193, 0.5);
-  --primary-color-footer: rgb(240, 192, 205);
+  --primary-color-footer: rgb(183, 211, 179);
   --border-color: rgb(209, 174, 183);
 }
 
@@ -12,7 +12,7 @@ body[data-theme=summer] {
   --primary-color: rgb(168, 231, 175);
   --primary-color-header: rgb(77, 184, 95);
   --primary-color-card: rgba(168, 231, 175, 0.5);
-  --primary-color-footer: rgb(147, 221, 147);
+  --primary-color-footer: rgb(231, 226, 159);
   --border-color: rgb(137, 177, 137);
 }
 
@@ -21,7 +21,7 @@ body[data-theme=fall] {
   --primary-color: rgb(245, 200, 141);
   --primary-color-header: rgb(248, 169, 66);
   --primary-color-card: rgba(245, 200, 141, 0.5);
-  --primary-color-footer: rgb(247, 184, 103);
+  --primary-color-footer: rgb(255, 156, 143);
   --border-color: rgb(214, 178, 130);
 }
 
@@ -30,7 +30,7 @@ body[data-theme=winter] {
   --primary-color: rgb(199, 235, 247);
   --primary-color-header: rgb(154, 203, 219);
   --primary-color-card: rgba(199, 235, 247, 0.5);
-  --primary-color-footer: rgb(184, 228, 243);
+  --primary-color-footer: rgb(216, 197, 176);
   --border-color: rgb(155, 192, 204);
 }
 
