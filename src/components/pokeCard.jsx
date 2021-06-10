@@ -9,18 +9,19 @@ import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 const PokeCard = ({ pokemon }) => {
   const dispatch = useDispatch();
   const { data, id } = pokemon;
-  const { name, count, inc, form } = data;
+  const { name, count, inc, form, tutorial } = data;
   const [url, setUrl] = useState("");
   const [input, setInput] = useState(1);
   const [visibleConfig, setVisibleConfig] = useState(false);
 
   useEffect(() => {
+    if (tutorial) setVisibleConfig(true);
     const getUrl = async () => {
       const url = await getImg(name, form);
       setUrl(url);
     };
     getUrl();
-  }, [name, form]);
+  }, [name, form, tutorial]);
 
   const handleIncrement = (id, inc, value) => {
     inc *= value;
@@ -64,7 +65,7 @@ const PokeCard = ({ pokemon }) => {
           ))}
         </div>
       </div>
-      <div className="card-footer d-flex justify-content-end">
+      <div className="card-footer px-1 d-flex justify-content-end">
         {visibleConfig && (
           <Fragment>
             <button
@@ -74,7 +75,7 @@ const PokeCard = ({ pokemon }) => {
               <BsTrash />
             </button>
             <button
-              className="btn btn-warning mx-1"
+              className="btn btn-warning"
               onClick={() => dispatch(changeForm(id))}
             >
               {form === "shiny" ? <AiFillStar /> : <AiOutlineStar />}
@@ -84,12 +85,12 @@ const PokeCard = ({ pokemon }) => {
               value={input}
               placeholder={inc}
               onChange={(e) => handleChange(e.target.value)}
-              className="form-control"
+              className="form-control mx-1"
             />
           </Fragment>
         )}
         <button
-          className="btn btn-info mx-1"
+          className="btn btn-info"
           onClick={() => setVisibleConfig(!visibleConfig)}
         >
           {visibleConfig ? <BsGearFill /> : <BsGear />}

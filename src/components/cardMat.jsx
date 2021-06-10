@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getPokemon, reorderPokemon } from "../store/pokemon";
 import PokeCard from "./pokeCard";
+import SearchBar from "./searchBar";
 import {
   GridContextProvider,
   GridDropZone,
@@ -26,23 +27,32 @@ const CardMat = () => {
   };
 
   return (
-    <GridContextProvider onChange={onChange}>
-      <div className="container">
-        <GridDropZone
-          id="items"
-          className="d-flex"
-          boxesPerRow={gridSize}
-          rowHeight={330}
-          style={{ height: getHeight() }}
-        >
-          {pokemon.map((poke) => (
-            <GridItem key={poke.id}>
-              <PokeCard pokemon={poke} />
-            </GridItem>
-          ))}
-        </GridDropZone>
-      </div>
-    </GridContextProvider>
+    <div>
+      <SearchBar />
+      <GridContextProvider onChange={onChange}>
+        <div className="container">
+          {pokemon.length === 0 && (
+            <p className="user-select-none">
+              There are 0 pokemon being displayed. <br /> Please type in the
+              name of any existing pokemon to add them. (e.g: Pikachu)
+            </p>
+          )}
+          <GridDropZone
+            id="items"
+            className="d-flex"
+            boxesPerRow={gridSize}
+            rowHeight={330}
+            style={{ height: getHeight() }}
+          >
+            {pokemon.map((poke) => (
+              <GridItem key={poke.id}>
+                <PokeCard pokemon={poke} />
+              </GridItem>
+            ))}
+          </GridDropZone>
+        </div>
+      </GridContextProvider>
+    </div>
   );
 };
 

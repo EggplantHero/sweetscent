@@ -42,6 +42,13 @@ nav {
   background-color: var(--nav-color);
   color: #f0f0f0;
 }
+nav .nav-link,
+nav .nav-link:focus {
+  color: #f0f0f0;
+}
+nav .nav-link:hover {
+  color: #747474;
+}
 
 div.card {
   border-color: var(--border-color);

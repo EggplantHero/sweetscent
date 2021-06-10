@@ -13,7 +13,7 @@ const WheelMenu = () => {
   };
 
   return (
-    <div className="col-4 d-inline-block">
+    <div className="mt-2 d-inline-block">
       <div className="d-flex justify-content-end mx-5 my-2">
         <div className="wheel">
           {seasons.map((season) => (

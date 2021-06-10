@@ -7,7 +7,7 @@ const slice = createSlice({
   initialState: [],
   reducers: {
     reorderPokemon: (pokemon, action) => {
-      return pokemon = action.payload;
+      return (pokemon = action.payload);
     },
     addPokemon: (pokemon, action) => {
       let id = new Date().getTime();
@@ -19,6 +19,7 @@ const slice = createSlice({
     addCount: (pokemon, action) => {
       const poke = pokemon.find((x) => x.id === action.payload.id);
       poke.data.count += action.payload.inc;
+      if (poke.data.count < 0) poke.data.count = 0;
     },
     setInc: (pokemon, action) => {
       const poke = pokemon.find((x) => x.id === action.payload.id);

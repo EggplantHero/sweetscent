@@ -32,7 +32,7 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="col-4 offset-4 my-4 d-inline-block" spellCheck="false">
+    <div className="col-4 my-4 d-inline-block" spellCheck="false">
       <Typeahead
         id="typeahead"
         placeholder="Name..."

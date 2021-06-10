@@ -38,6 +38,15 @@ body#body {
 nav {
   background-color: var(--nav-color);
   color: rgb(240, 240, 240);
+
+  .nav-link,
+  .nav-link:focus {
+    color: rgb(240, 240, 240);
+  }
+
+  .nav-link:hover {
+    color: rgb(116, 116, 116);
+  }
 }
 
 div.card {
