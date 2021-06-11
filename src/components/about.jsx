@@ -6,8 +6,8 @@ const About = () => {
     id: 1,
     data: {
       name: "deerling",
-      count: 100,
-      inc: 5,
+      count: 5,
+      inc: 1,
       form: "default",
       tutorial: "true",
     },
@@ -34,31 +34,35 @@ const About = () => {
           <h5>How to use</h5>
         </div>
         <div className="card-body">
-          <div className="col-4 mx-auto pe-none">
+          <div className="col-8 col-sm-6 col-md-4 mx-auto pe-none">
             <PokeCard pokemon={tutorialPoke} />
           </div>
           <p>
             The central number is the main count. This number can be increased
-            or decreased with the -5 / +5 buttons.
+            or decreased with the -1 / +1 buttons.
           </p>
           <p>
-            The blue gear is the config toggle menu. This will hide or show the
-            additional options beside it.
+            The gear button is the config toggle menu. This will hide or show
+            the additional options beside it.
           </p>
           <p>
-            The number input field will alter the value of the -5 / +5 buttons.
+            The number input field will alter the value of the -1 / +1 buttons.
           </p>
-          <p>The trash button will delete this card.</p>
+          <p>The trash button will delete the card.</p>
           <p>
             The star button will toggle this pokemon's appearance to become
             shiny. This is useful for marking your hunt as "completed".
           </p>
           <p>
-            The wheel menu at the top of the page will change the background
-            theme. The theme that loads with the page depends on the current
+            The background theme that loads with the page depends on the current
             season in real life, matching with Deerling, a pokemon whose
             appearance changes with the seasons.
           </p>
+          <p>
+            The wheel menu at the top of the page will change the background
+            theme, allowing you to preview other seasons.
+          </p>
+          <p>The cards can be reordered via drag-and-drop.</p>
         </div>
         <div className="card-footer"></div>
       </div>
