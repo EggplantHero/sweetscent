@@ -6,6 +6,6 @@ export const getSeason = () => {
   if (day > 79) season = "spring";
   if (day > 171) season = "summer";
   if (day > 263) season = "fall";
-  if (day > 354) season = "summer";
+  if (day > 354) season = "winter";
   return season;
 };
