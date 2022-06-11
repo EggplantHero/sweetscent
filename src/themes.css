@@ -83,12 +83,12 @@ body[data-theme=summer-night] {
 }
 
 body[data-theme=fall-night] {
-  --nav-color: rgb(150, 87, 59);
-  --primary-color: rgb(131, 96, 68);
-  --primary-color-header: rgb(150, 87, 59);
+  --nav-color: rgb(184, 129, 67);
+  --primary-color: rgb(131, 73, 67);
+  --primary-color-header: rgb(184, 129, 67);
   --primary-color-card: rgba(245, 200, 141, 0.5);
-  --primary-color-footer: rgb(155, 70, 70);
-  --border-color: rgb(131, 95, 78);
+  --primary-color-footer: rgb(173, 114, 114);
+  --border-color: rgb(192, 137, 75);
   --bg-img: url("./deerling/deerling-night.png");
   --input-color-text: rgb(185, 187, 190);
   --input-color-bg: rgb(54, 57, 63);
