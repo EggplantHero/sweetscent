@@ -1,53 +1,130 @@
-body[data-theme=spring] {
+body[data-theme=spring-day] {
   --nav-color: rgb(232, 179, 193);
   --primary-color: rgb(246, 207, 209);
   --primary-color-header: rgb(232, 179, 193);
   --primary-color-card: rgba(232, 179, 193, 0.5);
   --primary-color-footer: rgb(222, 231, 229);
   --border-color: rgb(209, 174, 183);
+  --bg-img: url("./deerling/deerling.png");
+  --input-color-text: #212529;
+  --input-color-bg: white;
+  --input-color-border: #ced4da;
+  --input-color-dropdown: white;
 }
 
-body[data-theme=summer] {
+body[data-theme=summer-day] {
   --nav-color: rgb(97, 196, 113);
   --primary-color: rgb(176, 228, 182);
   --primary-color-header: rgb(97, 196, 113);
   --primary-color-card: rgba(168, 231, 175, 0.5);
   --primary-color-footer: rgb(231, 226, 159);
   --border-color: rgb(137, 177, 137);
+  --bg-img: url("./deerling/deerling.png");
+  --input-color-text: #212529;
+  --input-color-bg: white;
+  --input-color-border: #ced4da;
+  --input-color-dropdown: white;
 }
 
-body[data-theme=fall] {
+body[data-theme=fall-day] {
   --nav-color: rgb(243, 179, 95);
   --primary-color: rgb(241, 195, 134);
   --primary-color-header: rgb(243, 179, 95);
   --primary-color-card: rgba(245, 200, 141, 0.5);
   --primary-color-footer: rgb(255, 156, 143);
   --border-color: rgb(202, 157, 97);
+  --bg-img: url("./deerling/deerling.png");
+  --input-color-text: #212529;
+  --input-color-bg: white;
+  --input-color-border: #ced4da;
+  --input-color-dropdown: white;
 }
 
-body[data-theme=winter] {
+body[data-theme=winter-day] {
   --nav-color: rgb(154, 203, 219);
   --primary-color: rgb(199, 235, 247);
   --primary-color-header: rgb(154, 203, 219);
   --primary-color-card: rgba(199, 235, 247, 0.5);
   --primary-color-footer: rgb(216, 197, 176);
   --border-color: rgb(155, 192, 204);
+  --bg-img: url("./deerling/deerling.png");
+  --input-color-text: #212529;
+  --input-color-bg: white;
+  --input-color-border: #ced4da;
+  --input-color-dropdown: white;
+}
+
+body[data-theme=spring-night] {
+  --nav-color: rgb(110, 54, 98);
+  --primary-color: rgb(109, 74, 107);
+  --primary-color-header: rgb(110, 54, 98);
+  --primary-color-card: rgba(232, 179, 193, 0.5);
+  --primary-color-footer: rgb(89, 103, 126);
+  --border-color: rgb(129, 71, 117);
+  --bg-img: url("./deerling/deerling-night.png");
+  --input-color-text: rgb(185, 187, 190);
+  --input-color-bg: rgb(54, 57, 63);
+  --input-color-border: rgb(47, 49, 54);
+  --input-color-dropdown: rgb(64, 68, 75);
+}
+
+body[data-theme=summer-night] {
+  --nav-color: rgb(33, 87, 73);
+  --primary-color: rgb(57, 110, 85);
+  --primary-color-header: rgb(33, 87, 73);
+  --primary-color-card: rgba(168, 231, 175, 0.5);
+  --primary-color-footer: rgb(139, 165, 108);
+  --border-color: rgb(45, 105, 89);
+  --bg-img: url("./deerling/deerling-night.png");
+  --input-color-text: rgb(185, 187, 190);
+  --input-color-bg: rgb(54, 57, 63);
+  --input-color-border: rgb(47, 49, 54);
+  --input-color-dropdown: rgb(64, 68, 75);
+}
+
+body[data-theme=fall-night] {
+  --nav-color: rgb(150, 87, 59);
+  --primary-color: rgb(131, 96, 68);
+  --primary-color-header: rgb(150, 87, 59);
+  --primary-color-card: rgba(245, 200, 141, 0.5);
+  --primary-color-footer: rgb(155, 70, 70);
+  --border-color: rgb(131, 95, 78);
+  --bg-img: url("./deerling/deerling-night.png");
+  --input-color-text: rgb(185, 187, 190);
+  --input-color-bg: rgb(54, 57, 63);
+  --input-color-border: rgb(47, 49, 54);
+  --input-color-dropdown: rgb(64, 68, 75);
+}
+
+body[data-theme=winter-night] {
+  --nav-color: rgb(13, 47, 87);
+  --primary-color: rgb(54, 65, 100);
+  --primary-color-header: rgb(13, 47, 87);
+  --primary-color-card: rgba(199, 235, 247, 0.5);
+  --primary-color-footer: rgb(145, 129, 110);
+  --border-color: rgb(27, 63, 105);
+  --bg-img: url("./deerling/deerling-night.png");
+  --input-color-text: rgb(185, 187, 190);
+  --input-color-bg: rgb(54, 57, 63);
+  --input-color-border: rgb(47, 49, 54);
+  --input-color-dropdown: rgb(64, 68, 75);
 }
 
 body#body {
   background-color: var(--primary-color);
+  background-image: var(--bg-img);
 }
 
 nav {
   background-color: var(--nav-color);
-  color: #f0f0f0;
+  color: rgb(240, 240, 240);
 }
 nav .nav-link,
 nav .nav-link:focus {
-  color: #f0f0f0;
+  color: rgb(240, 240, 240);
 }
 nav .nav-link:hover {
-  color: #747474;
+  color: rgb(116, 116, 116);
 }
 
 div.card {
@@ -56,13 +133,31 @@ div.card {
 }
 div.card .card-header {
   background-color: var(--primary-color-header);
-  color: #f0f0f0;
+  color: rgb(240, 240, 240);
 }
 div.card .card-body {
   background-color: var(--primary-color-card);
 }
 div.card .card-footer {
   background-color: var(--primary-color-footer);
+}
+
+input.form-control,
+input.form-control:focus {
+  background-color: var(--input-color-bg);
+  border-color: var(--input-color-border);
+  color: var(--input-color-text);
+}
+
+input.form-control::placeholder {
+  color: var(--input-color-text);
+}
+
+div.dropdown-menu {
+  background-color: var(--input-color-bg);
+}
+div.dropdown-menu a.dropdown-item {
+  color: var(--input-color-text);
 }
 
 /*# sourceMappingURL=themes.css.map */

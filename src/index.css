@@ -13,12 +13,10 @@ code {
 }
 
 body#body {
-  background-image: url("./deerling/deerling.png");
   background-attachment: fixed;
   background-size: cover;
   background-position: 60% 0%;
   background-repeat: no-repeat;
-  color: var(--text-color);
   transition: all 0.5s;
 }
 

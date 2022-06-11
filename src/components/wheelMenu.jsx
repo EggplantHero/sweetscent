@@ -1,12 +1,13 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { changeMode, getMode } from "../store/ui";
+import { changeMode, getDark, getMode, toggleDark } from "../store/ui";
+import { BsSun, BsMoonStarsFill } from "react-icons/bs";
 
 const WheelMenu = () => {
   const dispatch = useDispatch();
   const mode = useSelector(getMode);
+  const dark = useSelector(getDark);
   const seasons = ["spring", "summer", "fall", "winter"];
-
   const changeSeason = (season) => {
     if (season === mode) return;
     dispatch(changeMode(season));
@@ -23,7 +24,9 @@ const WheelMenu = () => {
               onClick={() => changeSeason(season)}
             ></button>
           ))}
-          <div className="circle"></div>
+          <div className="circle" onClick={() => dispatch(toggleDark())}>
+            {dark ? <BsMoonStarsFill /> : <BsSun />}
+          </div>
         </div>
       </div>
     </div>
